@@ -85,6 +85,25 @@ const moviesApi = app => {
       next(error);
     }
   });
+
+  router.patch('/:movieId', async (request, response, next) => {
+    const { movieId } = request.params;
+    const { body: movie } = request;
+
+    try {
+      const updatedMovieId = await moviesService.partialUpdateMovie({
+        movieId,
+        movie,
+      });
+
+      response.status(200).json({
+        data: updatedMovieId,
+        message: 'movie updated partially',
+      });
+    } catch (error) {
+      next(error);
+    }
+  });
 };
 
 module.exports = moviesApi;
