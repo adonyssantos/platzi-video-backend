@@ -13,7 +13,12 @@ const logErrors = (error, _request, _response, next) => {
   next(error);
 };
 
-const errorHandler = (error, _request, response) => {
+const errorHandler = (
+  error,
+  _request,
+  response,
+  _next // eslint-disable-line
+) => {
   response.status(error.status || 200);
   response.json(withErrorStack(error.message, error.stack));
 };
