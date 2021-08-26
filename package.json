@@ -5,8 +5,9 @@
   "main": "./src/index.js",
   "scripts": {
     "start": "NODE_ENV=production node ./src/index.js",
-    "dev": "DEBUG=APP:* nodemon ./src/index.js",
-    "dev:windows": "set DEBUG=APP:* nodemon ./src/index.js",
+    "dev": "DEBUG=express:*,app:* nodemon ./src/index.js",
+    "dev:windows": "set DEBUG=express:*,app:* nodemon ./src/index.js",
+    "debug": "DEBUG=express:*,app:* npm run start",
     "prepare": "husky install",
     "test": "set NODE_ENV=development && mocha ./src/test/ --exit",
     "cover": "nyc npm run test",
