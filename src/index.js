@@ -16,8 +16,10 @@ const {
 const notFoundHandler = require('./utils/middleware/notFoundHandler.js');
 
 // body parser
+const corsOptions = { origin: config.domain };
+
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(helmet());
 
 moviesApi(app);
