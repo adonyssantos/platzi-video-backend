@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/adonyssantos/platzi-video-backend#readme",
   "devDependencies": {
+    "chalk": "^4.1.2",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
@@ -46,11 +47,16 @@
   "dependencies": {
     "@hapi/boom": "^9.1.4",
     "@hapi/joi": "^15.0.3",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.1.0",
+    "passport": "^0.4.1",
+    "passport-http": "^0.3.0",
+    "passport-jwt": "^4.0.0",
     "sinon": "^11.1.2"
   },
   "lint-staged": {
